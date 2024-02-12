@@ -2,7 +2,7 @@
 
 1. Packages to install
     ```
-    yarn add --dev @types/jest jest babel-jest @babel/core @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom @testing-library/user-event 
+    yarn add --dev jest @types/jest babel-jest @babel/core @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom @testing-library/user-event 
     yarn add jest-environment-jsdom
     ```
 
