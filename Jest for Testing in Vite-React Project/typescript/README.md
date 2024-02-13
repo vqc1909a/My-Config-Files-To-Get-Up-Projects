@@ -3,7 +3,7 @@
 1. Packages to install
 
     ```
-    yarn add --dev jest @types/jest @testing-library/react @testing-library/jest-dom @testing-library/user-event
+    yarn add --dev jest jest-css-modules jest-transform-stub @types/jest @testing-library/react @testing-library/jest-dom @testing-library/user-event
     yarn add jest-environment-jsdom
     ```
 
@@ -57,6 +57,12 @@
 
         // To fix R"equest/Response/TextEncoder is not defined (Jest)"
         setupFiles: ['<rootDir>/jest.polyfills.ts'],
+
+        // This configuration tells Jest to use jest-transform-stub for SVG (and other static file) imports. Now, when you import an SVG file in your tests, Jest will replace it with a stub and won't throw an error.
+        moduleNameMapper: {
+            "\\.(css|less|scss|sss|styl)$": "jest-css-modules",
+            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub"
+        },
 
         testPathIgnorePatterns: ['/node_modules/', '/dist/', '/.yarn/'],
     }
