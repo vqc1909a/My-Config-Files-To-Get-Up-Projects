@@ -9,7 +9,7 @@
 
 2. Packages additional for typescript
     ```
-    yarn add -D ts-jest ts-node undici@5.0.0(install this package only if you use msw)
+    yarn add -D ts-jest ts-node
     ```
 3. If use msw package for mock services from until v2 to up
 
@@ -35,7 +35,7 @@
 
 6. Create config Jest && Setup && Polyfill
 
-    **jest.config.js**
+    **jest.config.ts**
 
     ```
     export default {
@@ -62,7 +62,7 @@
     }
     ```
 
-    **jest.setup.js**
+    **jest.setup.ts**
 
     ```
     //If will install the polyfill Fetch API, to will need to import this package
@@ -123,7 +123,7 @@
 
     ```
 
-8. For avoid some mistakes jest DOM syntax in each file tests, you need to import the following line
+8. For avoid some mistakes jest DOM syntax in file tests, you need to import the following line in the top in each file
 
     ```
     import '@testing-library/jest-dom'
@@ -133,4 +133,4 @@
    *https://mswjs.io/docs/migrations/1.x-to-2.x#requestresponsetextencoder-is-not-defined-jest*
    *https://github.com/mswjs/msw/discussions/1934*
 
-10. ****Now you are ready to test without problems in typescript****
+10. ****Now you are ready to test without problems with typescript****
